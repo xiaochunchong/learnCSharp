@@ -9,7 +9,7 @@ namespace 快乐数
         static void Main(string[] args)
         {
             Solution s = new Solution();
-            int num = new Random().Next(0, 100);
+            int num = new Random().Next(0, 100);   
             var flag = s.IsHappy(num);
             if (flag)
             {
