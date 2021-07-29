@@ -7,7 +7,7 @@ namespace Infrastructure.Redis
 {
     public interface IRedisCacheManager
     {
-         void Clear();
+        void Clear();
         bool Get(string key);
         string GetValue(string key);
         TEntity Get<TEntity>(string key);

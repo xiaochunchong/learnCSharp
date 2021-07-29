@@ -11,6 +11,8 @@ namespace Infrastructure.Redis
     public class RedisCacheManager : IRedisCacheManager
     {
         public readonly string redisConnenctionString;
+
+        //volatile 关键字指示一个字段可以由多个同时执行的线程修改
         public volatile ConnectionMultiplexer redisConnection;
         private readonly object redisConnectionLock = new object();
         private readonly IConfiguration _configuration;
