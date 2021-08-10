@@ -5,6 +5,7 @@ using StackExchange.Redis;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace Infrastructure.Redis
 {
@@ -54,10 +55,10 @@ namespace Infrastructure.Redis
                 {
                     this.redisConnection = ConnectionMultiplexer.Connect(redisConnenctionString);
                 }
-                catch (Exception)
+                catch (Exception e)
                 {
 
-                    throw new Exception("Redis服务未启用，请开启服务");
+                    throw new Exception($"Redis服务未启用，请开启服务({e.Message})");
                 }
             }
             return this.redisConnection;
@@ -111,9 +112,24 @@ namespace Infrastructure.Redis
             }
         }
 
+        public async void SetAsync(string key, object value, TimeSpan cacheTime)
+        {
+            if (value != null)
+            {
+                //序列化，将object值生成RedisValue
+              await  redisConnection.GetDatabase().StringSetAsync(key, SerializeHelper.Serialize(value), cacheTime);
+            }
+        }
+
         public bool SetValue(string key, byte[] value)
         {
             return redisConnection.GetDatabase().StringSet(key, value, TimeSpan.FromSeconds(120));
+        }
+
+        //异步调用
+        public async Task<bool> SetValueAsync(string key, byte[] value) 
+        {
+            return await redisConnection.GetDatabase().StringSetAsync(key, value, TimeSpan.FromSeconds(120));
         }
         #endregion
 

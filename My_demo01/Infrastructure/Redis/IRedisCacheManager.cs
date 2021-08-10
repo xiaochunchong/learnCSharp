@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace Infrastructure.Redis
 {
@@ -13,6 +14,8 @@ namespace Infrastructure.Redis
         TEntity Get<TEntity>(string key);
         void Remove(string key);
         void Set(string key, object value, TimeSpan cacheTime);
+        void SetAsync(string key, object value, TimeSpan cacheTime);
         bool SetValue(string key, byte[] value);
+        Task<bool> SetValueAsync(string key, byte[] value);
     }
 }

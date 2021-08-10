@@ -11,6 +11,7 @@ using Redis实现分布式缓存.Models;
 using System.Diagnostics;
 using System.Threading;
 using Infrastructure.Redis;
+using Microsoft.AspNetCore.Http;
 
 namespace Redis实现分布式缓存.Controllers
 {
@@ -20,6 +21,7 @@ namespace Redis实现分布式缓存.Controllers
     {
         private RedisCache rc;
         public IRedisCacheManager _redisCacheManager;
+        public IHttpContextAccessor _httpContextAccessor;
         #region 弃用
         /* 
          //初始化Redis对象,实例化时构造方法需要传入redis配置对象信息
@@ -39,10 +41,10 @@ namespace Redis实现分布式缓存.Controllers
          */
         #endregion
 
-        public StudentController(IRedisCacheManager redisCacheManager)
+        public StudentController(IRedisCacheManager redisCacheManager, IHttpContextAccessor httpContextAccessor)
         {
             _redisCacheManager = redisCacheManager;
-
+            _httpContextAccessor = httpContextAccessor;
         }
 
         /// <summary>
@@ -51,15 +53,17 @@ namespace Redis实现分布式缓存.Controllers
         /// <returns></returns>
         [HttpPost]
         [Route("write")]
-        public ActionResult<string> write(int id) 
+        public ActionResult<string> write(string id) 
         {
             /* 计算时间间隔
                Stopwatch tt = new Stopwatch();
                tt.Start();
                Thread.Sleep(2000);
                tt.Stop();
-               Console.WriteLine(tt.ElapsedMilliseconds);*/
-        #region  弃用
+               Console.WriteLine(tt.ElapsedMilliseconds);
+               */
+            
+            #region  弃用
             /*  Person stu = new Person()
               {
                   Name = "Tom",
@@ -76,7 +80,7 @@ namespace Redis实现分布式缓存.Controllers
               rc.SetString("livetime", DateTime.Now.ToString(),option);
               return "sussess";*/
             #endregion
-            var key = id.ToString();
+            var key = id;
             object a = new object();
             if (_redisCacheManager.Get<object>(key) != null)
             {

@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Infrastructure.Redis;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -40,6 +41,7 @@ namespace Redis实现分布式缓存
                 c.IncludeXmlComments(xmlPath, true);
             });
             services.AddSingleton<IRedisCacheManager,RedisCacheManager>();
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
