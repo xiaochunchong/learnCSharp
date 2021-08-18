@@ -4,7 +4,7 @@
         <name>Redis实现分布式缓存</name>
     </assembly>
     <members>
-        <member name="M:Redis实现分布式缓存.Controllers.StudentController.write(Redis实现分布式缓存.Models.Person)">
+        <member name="M:Redis实现分布式缓存.Controllers.StudentController.write(System.String)">
             <summary>
             写
             </summary>

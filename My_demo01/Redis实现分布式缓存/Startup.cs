@@ -40,6 +40,7 @@ namespace Redis实现分布式缓存
                 // 添加控制器层注释，true表示显示控制器注释
                 c.IncludeXmlComments(xmlPath, true);
             });
+
             services.AddSingleton<IRedisCacheManager,RedisCacheManager>();
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
         }

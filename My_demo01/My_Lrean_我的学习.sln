@@ -39,21 +39,25 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AOP_Log4Net", "AOP_Log4Net\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Redis实现分布式缓存", "Redis实现分布式缓存\Redis实现分布式缓存.csproj", "{CA540642-2CBB-4276-9D1D-EE198F83A7F6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "实现strStr()", "实现strStr()\实现strStr().csproj", "{56C32D74-9EC7-441C-B293-A003A0168269}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "实现strStr()", "实现strStr()\实现strStr().csproj", "{56C32D74-9EC7-441C-B293-A003A0168269}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Redis消息队列", "Redis消息队列\Redis消息队列.csproj", "{78C3FF2C-A173-4A7C-A2F7-132E81AED47E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Redis消息队列", "Redis消息队列\Redis消息队列.csproj", "{78C3FF2C-A173-4A7C-A2F7-132E81AED47E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Redis消息队列Demo", "Redis消息队列Demo", "{C8F12C9D-08CA-4207-81ED-D6910CCB1166}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedisPoints", "RedisPoints\RedisPoints.csproj", "{2D68C519-C5F8-41F5-89A6-0429CD3B659F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RedisPoints", "RedisPoints\RedisPoints.csproj", "{2D68C519-C5F8-41F5-89A6-0429CD3B659F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedisSms", "RedisSms\RedisSms.csproj", "{9FF61D4A-CCD7-401F-85E3-11B4F2E2D17A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RedisSms", "RedisSms\RedisSms.csproj", "{9FF61D4A-CCD7-401F-85E3-11B4F2E2D17A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{F34C2665-3A36-40DC-A1C7-ACDACB017054}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{E90F1155-0574-4FF7-A072-23F033F6EAF3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{E90F1155-0574-4FF7-A072-23F033F6EAF3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "快乐数", "快乐数\快乐数.csproj", "{81ADE5FF-4671-4E39-9C2B-A0FB1C96E4C1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "快乐数", "快乐数\快乐数.csproj", "{81ADE5FF-4671-4E39-9C2B-A0FB1C96E4C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "My_demo12_垃圾回收", "My_demo12_垃圾回收\My_demo12_垃圾回收.csproj", "{9FC6095F-A6ED-4AF4-8AA3-4B1AA0DFB4FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "My_demo13_整合Dapper", "My_demo13_整合Dapper\My_demo13_整合Dapper.csproj", "{F2E5D07F-D182-4CA5-BA15-82428551D57E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -153,6 +157,14 @@ Global
 		{81ADE5FF-4671-4E39-9C2B-A0FB1C96E4C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{81ADE5FF-4671-4E39-9C2B-A0FB1C96E4C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{81ADE5FF-4671-4E39-9C2B-A0FB1C96E4C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9FC6095F-A6ED-4AF4-8AA3-4B1AA0DFB4FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FC6095F-A6ED-4AF4-8AA3-4B1AA0DFB4FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FC6095F-A6ED-4AF4-8AA3-4B1AA0DFB4FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FC6095F-A6ED-4AF4-8AA3-4B1AA0DFB4FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2E5D07F-D182-4CA5-BA15-82428551D57E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2E5D07F-D182-4CA5-BA15-82428551D57E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2E5D07F-D182-4CA5-BA15-82428551D57E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2E5D07F-D182-4CA5-BA15-82428551D57E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
