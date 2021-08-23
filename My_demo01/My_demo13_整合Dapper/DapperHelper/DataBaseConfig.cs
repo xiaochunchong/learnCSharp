@@ -8,7 +8,7 @@ namespace My_demo13_整合Dapper.DapperHelper
 {
     public class DataBaseConfig
     {
-        private  static string mysqlconnectionstring;
+        private string mysqlconnectionstring;
         public string Mysqlconnectionstring { 
             get
             { 
@@ -19,7 +19,5 @@ namespace My_demo13_整合Dapper.DapperHelper
         {
             mysqlconnectionstring = Configuration.GetConnectionString("DefaultConnection");
         }
-     
-
     }
 }

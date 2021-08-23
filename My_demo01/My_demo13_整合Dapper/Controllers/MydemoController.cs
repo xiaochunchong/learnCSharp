@@ -15,7 +15,6 @@ namespace My_demo13_整合Dapper.Controllers
     public class MydemoController : ControllerBase
     {
         public IDapper _IDapper;
-        public IConfiguration _Configuration;
         public MydemoController(IDapper Idapper)
         {
             _IDapper = Idapper;
@@ -33,9 +32,9 @@ namespace My_demo13_整合Dapper.Controllers
                  agee= conn.Query<string>("select name from stu where age =@age;" , new { age = 18 }).FirstOrDefault();
              }*/
             #endregion
-            var aaa =  _IDapper.QueryList<object>( "select * from stu where age =@age;",new { age=age}).FirstOrDefault();
+            var aaa =  _IDapper.QueryList<object>( "select * from stu where age =@age;",new { age=age});
+            var bbb = await _IDapper.QueryAsync<object>("select * from stu where age =@age;", new { age = age });
             return "a";
         }
-
     }
 }

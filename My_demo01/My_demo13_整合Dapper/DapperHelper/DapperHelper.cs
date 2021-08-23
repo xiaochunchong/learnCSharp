@@ -12,13 +12,16 @@ namespace My_demo13_整合Dapper.DapperHelper
     public class SQLDapperHelper : IDapper
     {
         public static IConfiguration _Configuration { get; set; }
+        public string _connectionString;
         public SQLDapperHelper(IConfiguration Configuration)
         {
             _Configuration = Configuration;
+            /// 数据库连接字符串
+            _connectionString = new DataBaseConfig(_Configuration).Mysqlconnectionstring;
         }
 
-        /// <summary>数据库连接字符串</summary>
-        public string _connectionString = new DataBaseConfig(_Configuration).Mysqlconnectionstring;
+        
+     
 
         private IDbConnection _connection { get; set; }
         public IDbConnection Connection
