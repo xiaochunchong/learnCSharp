@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using HtmlAgilityPack;
+
 namespace ConsoleApp1
 {
     class Program
@@ -19,7 +20,7 @@ namespace ConsoleApp1
                 else    //如果标签下面没有标签了，就进行替换文本信息。注意：HtmlNode是全局变量
                 {
                     item.InnerHtml = item.InnerHtml.Replace(before, after);
-                }
+                } 
             }
         }
         static void Main(string[] args)

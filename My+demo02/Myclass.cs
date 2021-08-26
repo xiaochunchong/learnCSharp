@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace My_demo02
 {
-    class Myclass
+   public class Myclass
     {
         private int id;
         private int age;
         public  int number;  
         public  string Name { get; set; }
+        public  string Email { get; set; }
 
         public void test01() 
         {
