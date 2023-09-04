@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29728.190
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33424.131
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "My_demo01_异步编程", "My_demo01\My_demo01_异步编程.csproj", "{AF040034-FF38-484F-AC22-6E9DE27F6A94}"
 EndProject
@@ -71,7 +71,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "顺序栈", "顺序栈\顺�
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "链栈", "链栈\链栈.csproj", "{52864F2F-DAB2-44EB-BF1E-73D4E1F92AA3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Question", "Question\Question.csproj", "{99A75AE2-012D-4A77-A27C-60F82CADE6B7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Question", "Question\Question.csproj", "{99A75AE2-012D-4A77-A27C-60F82CADE6B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "设计原则和模式", "设计原则和模式\设计原则和模式.csproj", "{BB6C6428-CB7D-46BA-8D7F-D209EDBB87DE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -207,6 +209,10 @@ Global
 		{99A75AE2-012D-4A77-A27C-60F82CADE6B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{99A75AE2-012D-4A77-A27C-60F82CADE6B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{99A75AE2-012D-4A77-A27C-60F82CADE6B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB6C6428-CB7D-46BA-8D7F-D209EDBB87DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB6C6428-CB7D-46BA-8D7F-D209EDBB87DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB6C6428-CB7D-46BA-8D7F-D209EDBB87DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB6C6428-CB7D-46BA-8D7F-D209EDBB87DE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
